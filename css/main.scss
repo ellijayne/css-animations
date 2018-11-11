@@ -109,11 +109,25 @@ body {
 
   &__hair {
     position: absolute;
-    width: 20%;
-    height: 20%;
-    z-index: 1;
     background-color: $koala-grey-color;
 
+    &--one {
+      left: 45%;
+      top: -8%;
+      width: 20%;
+      height: 20%;
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    &--two {
+      left: 32%;
+      top: -4%;
+      width: 20%;
+      height: 20%;
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
   }
 
 
