@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 body {
   background: #25A9FC;
 }
@@ -19,7 +21,7 @@ body {
   left: 25%;
   width: 50%;
   height: 67%;
-  background-color: #A6BECF;
+  background-color: $koala-grey-color;
   border-radius: 50%;
 
 
@@ -27,7 +29,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: #A6BECF;
+    background: $koala-grey-color;
     border-radius: 50%;
     z-index: 2;
   }
@@ -36,7 +38,7 @@ body {
     position: absolute;
     width: 60%;
     height: 65%;
-    background-color: #A6BECF;
+    background-color: $koala-grey-color;
     border-radius: 50%;
     z-index: 1;
     left: -20%;
@@ -46,7 +48,7 @@ body {
     position: absolute;
     width: 60%;
     height: 65%;
-    background-color: #A6BECF;
+    background-color: $koala-grey-color;
     border-radius: 50%;
     z-index: 1;
     right: -20%;
@@ -61,7 +63,7 @@ body {
     top: 10%;
     left: 10%;
     z-index: 1;
-    background-color: #819CAF;
+    background-color: $koala-ear-color;
   }
 
   &__eye {
@@ -96,7 +98,7 @@ body {
 
   &__nose {
     position: absolute;
-    background: #BE845F;
+    background: $nose-color;
     height: 42.5%;
     width: 25%;
     border-radius: 50px; //said when items arent round and just corners rounded its easier to use px instead of %
@@ -105,7 +107,14 @@ body {
     left: 37%;
   }
 
+  &__hair {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    z-index: 1;
+    background-color: $koala-grey-color;
 
+  }
 
 
 
