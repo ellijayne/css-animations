@@ -1,3 +1,5 @@
 $(document).ready(function() {
-  console.log('surprise bitch');
+  $('.canvas-container').click(function() {
+
+  })
 });

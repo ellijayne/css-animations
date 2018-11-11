@@ -78,11 +78,43 @@ body {
 
     &--left {
       left: 21%;
+
     }
+
+    &--lid {
+      border-radius: 0;
+      top: -49px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $koala-ear-color;
+      -webkit-clip-path: circle(50% at 50% 100%);
+      clip-path: circle(50% at 50% 100%);
+      z-index: 15;
+    }
+
+    &--lid-close {
+      border-radius: 0;
+      top: 39px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $koala-ear-color;
+      -webkit-clip-path: circle(50% at 50% 5%);
+      clip-path: circle(50% at 50% 5%);
+      z-index: 15;
+
+      transform: scale(1, 0.1);
+      transform-origin: top;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
 
     &--right {
       right: 21%;
     }
+
+
 
     &--pupil {
       position: absolute;
@@ -131,5 +163,70 @@ body {
   }
 
 
+
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1, 0.1);
+    -webkit-transform: scale(1, 0.1);
+  }
+
+  10% {
+    transform: scale(1, 0.2);
+    -webkit-transform: scale(1, 0.2);
+    animation-timing-function: ease-in;
+  }
+  20% {
+    transform: scale(1, 0.4);
+    -webkit-transform: scale(1, 0.4);
+    animation-timing-function: ease-in;
+  }
+  30% {
+    transform: scale(1, 0.6);
+    -webkit-transform: scale(1, 0.6);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: scale(1, 0.8);
+    -webkit-transform: scale(1, 0.8);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1.1);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: scale(1, 0.9);
+    -webkit-transform: scale(1, 0.9);
+    animation-timing-function: ease-out;
+  }
+
+  70% {
+    transform: scale(1, 0.8);
+    -webkit-transform: scale(1, 0.8);
+    animation-timing-function: ease-out;
+  }
+  80% {
+    transform: scale(1, 0.6);
+    -webkit-transform: scale(1, 0.6);
+    animation-timing-function: ease-out;
+  }
+  90% {
+    transform: scale(1, 0.4);
+    -webkit-transform: scale(1, 0.4);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: scale(1, 0.2);
+    -webkit-transform: scale(1, 0.2);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: scale(1, 0.1);
+    -webkit-transform: scale(1, 0.1);
+    animation-timing-function: ease-out;
+  }
 
 }
