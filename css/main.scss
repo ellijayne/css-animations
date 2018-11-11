@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "animations.scss";
 
 body {
   background: #25A9FC;
@@ -13,6 +14,12 @@ body {
   width: 600px;
   height: 420px;
   background: none;
+
+  &:hover {
+    .koala__eye--lid-close {
+      animation: blink 1.5s ease-in-out infinite;
+    }
+  }
 }
 
 .koala {
@@ -95,7 +102,7 @@ body {
 
     &--lid-close {
       border-radius: 0;
-      top: 39px;
+      top: 43px;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -106,15 +113,12 @@ body {
 
       transform: scale(1, 0.1);
       transform-origin: top;
-      animation: blink 1.5s ease-in-out infinite;
     }
 
 
     &--right {
       right: 21%;
     }
-
-
 
     &--pupil {
       position: absolute;
@@ -123,7 +127,7 @@ body {
       height: 30%;
       border-radius: 50%;
       left: 36%;
-      top: 35%;
+      top: 37%;
       z-index: 4;
     }
   }
@@ -161,72 +165,4 @@ body {
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     }
   }
-
-
-
-}
-
-@keyframes blink {
-  0% {
-    transform: scale(1, 0.1);
-    -webkit-transform: scale(1, 0.1);
-  }
-
-  10% {
-    transform: scale(1, 0.2);
-    -webkit-transform: scale(1, 0.2);
-    animation-timing-function: ease-in;
-  }
-  20% {
-    transform: scale(1, 0.4);
-    -webkit-transform: scale(1, 0.4);
-    animation-timing-function: ease-in;
-  }
-  30% {
-    transform: scale(1, 0.6);
-    -webkit-transform: scale(1, 0.6);
-    animation-timing-function: ease-in;
-  }
-  50% {
-    transform: scale(1, 0.8);
-    -webkit-transform: scale(1, 0.8);
-    animation-timing-function: ease-in;
-  }
-  50% {
-    transform: scale(1, 1);
-    -webkit-transform: scale(1, 1.1);
-    animation-timing-function: ease-in;
-  }
-  60% {
-    transform: scale(1, 0.9);
-    -webkit-transform: scale(1, 0.9);
-    animation-timing-function: ease-out;
-  }
-
-  70% {
-    transform: scale(1, 0.8);
-    -webkit-transform: scale(1, 0.8);
-    animation-timing-function: ease-out;
-  }
-  80% {
-    transform: scale(1, 0.6);
-    -webkit-transform: scale(1, 0.6);
-    animation-timing-function: ease-out;
-  }
-  90% {
-    transform: scale(1, 0.4);
-    -webkit-transform: scale(1, 0.4);
-    animation-timing-function: ease-out;
-  }
-  95% {
-    transform: scale(1, 0.2);
-    -webkit-transform: scale(1, 0.2);
-    animation-timing-function: ease-out;
-  }
-  100% {
-    transform: scale(1, 0.1);
-    -webkit-transform: scale(1, 0.1);
-    animation-timing-function: ease-out;
-  }
-
 }
