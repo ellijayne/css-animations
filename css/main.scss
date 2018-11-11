@@ -4,4 +4,21 @@ body {
 
 .canvas-container {
   border: solid 10px white;
+  position: relative; //this with the block and auto below center div.
+  margin: auto;
+  display: block;
+  margin-top: 8%; //makes 8% lower than top of page
+  width: 600px;
+  height: 420px;
+  background: none;
+}
+
+.koala__head {
+  position: absolute;
+  top: 16.5%;
+  left: 25%;
+  width: 50%;
+  height: 67%;
+  background-color: #A6BECF;
+  border-radius: 50%;
 }
